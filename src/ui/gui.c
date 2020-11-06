@@ -11,7 +11,7 @@
 #include "list.h"
 #include "key.h"
 
-#define ACTION_LENGTH 120
+#define ACTION_LENGTH 250
 
 int junk;
 int nelems;
@@ -179,7 +179,12 @@ void print_in_window(WINDOW * win, int starty, int startx, int width,
     }
     x = startx + (int)temp;
     wattron(win, color);
-    mvwprintw(win, y, x, "%s", string);
+	/* move cursor*/
+	wmove(win,y,x);
+	/* print text, moving the cursor (potentially line wrapping) after each character */
+	wprintw(win,"%s", string);
+
+
     wattroff(win, color);
     refresh();
 }

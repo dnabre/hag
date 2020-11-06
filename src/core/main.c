@@ -194,6 +194,7 @@ int main(int argc, char **argv)
                         continue;
                     }
                     break;
+		
                 case KEY_CLIMB_UP:
                     if (map_get(player->y, player->x) == '<') {
                         add_action("You climb up the ladder.");
@@ -223,6 +224,7 @@ int main(int argc, char **argv)
                 case KEY_BIDE:
                     break;
                 case KEY_QUIT:
+				case KEY_QUIT_2:
                     endwin();
                     return 0;
                     break;
@@ -240,7 +242,10 @@ int main(int argc, char **argv)
                         ("    s|d|i -> increase strength|dexterity|intelligence on levelup");
                     add_action("    F4 -> quit the game");
                     break;
-                default:
+        		case KEY_LONG:
+					add_action("testing a very long line 1,testing a very long line 2,testing a very long line 3,testing a very long line 4,testing a very long line 5, test6#,test7#, test8#, test9#,testa#, testb#,");
+					break;
+		        default:
                     add_action("Invalid button. Press '?' for the manual");
                     moved = 0;
                     continue;

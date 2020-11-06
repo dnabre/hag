@@ -43,4 +43,6 @@
 #define KEY_QUIT          KEY_F(4)
 #define KEY_QUESTIONMARK  '?'
 
+#define KEY_LONG		'x'
+#define KEY_QUIT_2		'z'
 #endif

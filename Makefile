@@ -10,7 +10,7 @@ OBJECTS  = $(addprefix $(OBJDIR), $(notdir $(SOURCES:.c=.o)))
  
 # Declaration of variables
 CC       = gcc 
-CC_FLAGS =-lpanel -lncurses -g -Wall -std=c89 -pedantic -Wextra -Werror \
+CC_FLAGS =-lpanel -lncurses -g -Wall -std=c89 -pedantic -Wextra  \
 		  -Wmissing-prototypes -Wstrict-prototypes $(INCLUDE)
 ID       = uncrustify
 ID_FLAGS =-c uncrustify.cfg
